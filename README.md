@@ -4,7 +4,7 @@ Below is a brief summary of the PID components of the model's PID steering syste
 
 ![](https://github.com/JLee21/PID-Control/blob/master/img/eqn2.JPG)
 
-I realized that the integral component of the PID controller is negligible. This is because the integral term helps mitigate constant error inducing-elements in the real world. For example, if the vehicle had a bad steering alignment and was constantly shifting to the right, then a integral value would be appropriate. But within the simulator the car is assumed to have perfect alignment and no constant drifting. 
+I realized that the integral component of the PID controller is negligible. This is because the integral term helps mitigate constant error-inducing elements in the real world. For example, if the vehicle has a bad steering alignment and is constantly shifting to the right, then a integral value would be appropriate. But within the simulator the car is assumed to have perfect alignment and no constant drifting. 
 
 With the integral term taken care of it's time to move on to the proportional and derivative terms, Kp and Kd.
 
@@ -18,7 +18,7 @@ If we keep the proportional and integral term at zero, let's see what a +/- 1 fo
 
 ![](https://github.com/JLee21/PID-Control/blob/master/img/kd.jpg)
 
-For the derivative term, it is the rate of change of the error contributes to the steering angle. If the quicker the error term grows, the larger the derivative term's contribution has on the total error of the system. This term is particularly important during turns because if the derivative term helps respond to changes in the track's direction.
+For the derivative term, it is the rate of change of the error contributes to the steering angle. The quicker the error term grows, the larger the derivative term's contribution has on the total error of the system. This term is particularly important during turns because term is apt to changes in the track's direction.
 
 If we keep the integral and derivative term zero, let's see what a positive and negative proportional value contributes.
 
@@ -30,6 +30,6 @@ Taking in account the statements above, I was able to manually tune the PID term
 
 ![](https://github.com/JLee21/PID-Control/blob/master/img/best.jpg)
 
-The plot above shows a consistnely low cross track error throughout the track.
+The plot above shows a consistently low cross track error throughout the track.
 
-I noticed the proportional term to be sensitive to changes while the derivative term needed to be increased high enough to handle the change in steering as the vehicle drove through curves. If the proportional term was too high, the vehicle would induce oscillations frequently. If the derivative term was too high, the vehicle would react too violently on turns by commanding sharp steering commands.
+I noticed the proportional term to be sensitive to changes while the derivative term needed to be increased to handle the change in steering as the vehicle drove through curves. If the proportional term was too high, the vehicle would induce oscillations frequently. If the derivative term was too high, the vehicle would react too violently on turns by commanding sharp steering commands.
