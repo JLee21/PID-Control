@@ -1,5 +1,6 @@
 ## PID Control
 
+
 Below is a brief summary of the PID components of the model's PID steering system.
 
 ![](https://github.com/JLee21/PID-Control/blob/master/img/eqn.JPG)
