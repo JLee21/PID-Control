@@ -4,7 +4,7 @@ Below is a brief summary of the PID components of the model's PID steering syste
 
 ![]()
 
-I realized that the integral component of the PID controller is negligible. This is because the integral term helps mitigate constant error inducing elements in the real world. For example, if the vehicle had a bad steering alignment and was constantly shifting to the right, then a integral value of zero would be appropriate. But within the simulator the car is assumed to have perfect aligment and no constant drifting. 
+I realized that the integral component of the PID controller is negligible. This is because the integral term helps mitigate constant error inducing-elements in the real world. For example, if the vehicle had a bad steering alignment and was constantly shifting to the right, then a integral value of zero would be appropriate. But within the simulator the car is assumed to have perfect alignment and no constant drifting. 
 
 With the integral term taken care of it's time to move on to the proportional and derivative terms, Kp and Kd.
 
@@ -18,13 +18,13 @@ If we keep the proportional and integral at zero, let's see what a +/- 1 for the
 
 ![]()
 
-For the derivative term, it is the rate of change of the error contributes to the steering angle. If the quicker the error term grows, the larger the derivative term's contributuion has on the total error of the system. This term is particularly important during turns because if the derivative term helps respond to changes in the track's direction.
+For the derivative term, it is the rate of change of the error contributes to the steering angle. If the quicker the error term grows, the larger the derivative term's contribution has on the total error of the system. This term is particularly important during turns because if the derivative term helps respond to changes in the track's direction.
 
 If we keep the integral and derivative term zero, let's see what a positive and negative proportional value contributes.
 
 ![]()
 
-The proportional term scales with the error of the system. If the error is large, the contributuion to the total error would be a scaling factor of that error. Clearly, a negative proportional term compensates the magnitude of the error by inversing the steering commmand while a postive proportional term simply scales positively with the error.
+The proportional term scales with the error of the system. If the error is large, the contribution to the total error would be a scaling factor of that error. Clearly, a negative proportional term compensates the magnitude of the error by inversing the steering command while a positive proportional term simply scales positively with the error.
 
 Taking in account the statements above, I was able to manually tune the PID terms to produce the following results:
 
