@@ -2,7 +2,7 @@
 
 Below is a brief summary of the PID components of the model's PID steering system.
 
-![]()
+![](https://github.com/JLee21/PID-Control/blob/master/img/eqn.JPG)
 
 I realized that the integral component of the PID controller is negligible. This is because the integral term helps mitigate constant error inducing-elements in the real world. For example, if the vehicle had a bad steering alignment and was constantly shifting to the right, then a integral value of zero would be appropriate. But within the simulator the car is assumed to have perfect alignment and no constant drifting. 
 
