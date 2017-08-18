@@ -22,10 +22,6 @@ void PID::Init(double Kp, double Ki, double Kd) {
   p_error = 0;
   i_error = 0;
   d_error = 0;
-
-  // printf("%s\n", "TEST");
-  // std::cout << 'Kp:' << Kp << " Ki:" << Ki << " Kd:" << Kd << endl;
-
 }
 
 void PID::UpdateError(double cte) {
