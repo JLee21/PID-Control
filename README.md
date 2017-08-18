@@ -28,6 +28,6 @@ The proportional term scales with the error of the system. If the error is large
 
 Taking in account the statements above, I was able to manually tune the PID terms to produce the following results:
 
-![]()
+![](https://github.com/JLee21/PID-Control/blob/master/img/best.tiff)
 
 I noticed the proportional term to be sensitive to changes while the derivative term needed to be increased high enough to handle the change in steering as the vehicle drove through curves. If the proportional term as too high, the vehicle would induce oscillations frequently. If the derivative term was too high, the vehicle would react too violently on turns by commanding sharp steering commands.
