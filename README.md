@@ -4,7 +4,7 @@ Below is a brief summary of the PID components of the model's PID steering syste
 
 ![](https://github.com/JLee21/PID-Control/blob/master/img/eqn.JPG)
 
-I realized that the integral component of the PID controller is negligible. This is because the integral term helps mitigate constant error inducing-elements in the real world. For example, if the vehicle had a bad steering alignment and was constantly shifting to the right, then a integral value of zero would be appropriate. But within the simulator the car is assumed to have perfect alignment and no constant drifting. 
+I realized that the integral component of the PID controller is negligible. This is because the integral term helps mitigate constant error inducing-elements in the real world. For example, if the vehicle had a bad steering alignment and was constantly shifting to the right, then a integral value would be appropriate. But within the simulator the car is assumed to have perfect alignment and no constant drifting. 
 
 With the integral term taken care of it's time to move on to the proportional and derivative terms, Kp and Kd.
 
@@ -14,7 +14,7 @@ Here's a look of how the vehicle performs over time with all PID terms set to ze
 
 Clearly, the vehicle continues to accumulate cross track error (drift away from the center of the track).
 
-If we keep the proportional and integral at zero, let's see what a +/- 1 for the derivate term accomplishes.
+If we keep the proportional and integral term at zero, let's see what a +/- 1 for the derivate term accomplishes.
 
 ![](https://github.com/JLee21/PID-Control/blob/master/img/kd.jpg)
 
@@ -30,4 +30,6 @@ Taking in account the statements above, I was able to manually tune the PID term
 
 ![](https://github.com/JLee21/PID-Control/blob/master/img/best.jpg)
 
-I noticed the proportional term to be sensitive to changes while the derivative term needed to be increased high enough to handle the change in steering as the vehicle drove through curves. If the proportional term as too high, the vehicle would induce oscillations frequently. If the derivative term was too high, the vehicle would react too violently on turns by commanding sharp steering commands.
+The plot above shows a consistnely low cross track error throughout the track.
+
+I noticed the proportional term to be sensitive to changes while the derivative term needed to be increased high enough to handle the change in steering as the vehicle drove through curves. If the proportional term was too high, the vehicle would induce oscillations frequently. If the derivative term was too high, the vehicle would react too violently on turns by commanding sharp steering commands.
