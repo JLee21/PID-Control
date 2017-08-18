@@ -14,7 +14,7 @@ void PID::Init(double Kp, double Ki, double Kd) {
 
   // similar to python's self.Kp = Kp
   // this means that whatever class object called this Init() function,
-  //   assign that object's Kp,Ki,Kd the following:
+  // assign that object's Kp,Ki,Kd the following:
   this->Kp = Kp;
   this->Ki = Ki;
   this->Kd = Kd;

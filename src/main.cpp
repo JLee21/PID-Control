@@ -60,8 +60,6 @@ int main(int argc, char* argv[]){
           /*
           * TODO: Calcuate steering value here, remember the steering value is
           * [-1, 1].
-          * NOTE: Feel free to play around with the throttle and speed. Maybe use
-          * another PID controller to control the speed!
           */
           pid.UpdateError(cte);
           steer_value = pid.TotalError();
@@ -71,7 +69,7 @@ int main(int argc, char* argv[]){
 
           json msgJson;
           msgJson["steering_angle"] = steer_value;
-          msgJson["throttle"] = 1;
+          msgJson["throttle"] = 0.5;
           auto msg = "42[\"steer\"," + msgJson.dump() + "]";
           std::cout << msg << std::endl;
           ws.send(msg.data(), msg.length(), uWS::OpCode::TEXT);
